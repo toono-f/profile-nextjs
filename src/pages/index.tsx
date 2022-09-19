@@ -1,8 +1,9 @@
 import { BasicLayout } from "@/components/layouts/BasicLayout";
+import { Top } from "@/components/templates/Top";
 import { NextPageWithLayout } from "@/lib/next/types";
 
 const Page: NextPageWithLayout = () => {
-  return <></>;
+  return <Top />;
 };
 
 Page.getLayout = BasicLayout;
