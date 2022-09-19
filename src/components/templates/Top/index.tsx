@@ -1,4 +1,6 @@
 import { Mv } from "@/components/atoms/Mv";
+import { TagList } from "@/components/molecules/TagList";
+import { Skills } from "@/data/skills";
 import { NextSeo } from "next-seo";
 
 export const Top = () => {
@@ -32,9 +34,10 @@ export const Top = () => {
             <br className="sp:hidden" />
             美味しいケーキを食べに行くのが好きです。
           </p>
-          {/* <section className="mt-20">
-            <h2 className="text-20 font-bold">Skills</h2>
-          </section> */}
+          <section className="mt-20 flex flex-col items-center gap-20">
+            <h2 className="text-24 font-bold">Skills</h2>
+            <TagList data={Skills} />
+          </section>
         </section>
       </main>
     </>
