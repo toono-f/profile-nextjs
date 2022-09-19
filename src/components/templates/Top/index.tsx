@@ -12,10 +12,10 @@ export const Top = () => {
           description: "フロントエンドエンジニアのOtonoが制作したポートフォリオです。",
         }}
       />
-      <main>
+      <main className="py-100 sp:py-50">
         <Mv />
         <section className="mx-auto mt-30 flex max-w-[1000px] flex-col items-center gap-20 text-center sp:px-20 sp:text-left">
-          <h1 className="text-24 font-bold">About me</h1>
+          <h1 className="text-32 font-bold">About me</h1>
           <p>
             1993年生まれ。北海道出身、東京在住のWebエンジニア。
             <br className="sp:hidden" />
