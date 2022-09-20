@@ -1,10 +1,13 @@
 import { Button } from "@/components/atoms/Button";
 import { Mv } from "@/components/atoms/Mv";
+import { BlogList } from "@/components/molecules/BlogList";
 import { TagList } from "@/components/molecules/TagList";
 import { Skills } from "@/data/skills";
+import { BlogListType } from "@/types/api";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import EmailIcon from "@mui/icons-material/Email";
 import HandymanIcon from "@mui/icons-material/Handyman";
+import RssFeedIcon from "@mui/icons-material/RssFeed";
 import { NextSeo } from "next-seo";
 
 const meta = {
@@ -12,7 +15,11 @@ const meta = {
   description: "フロントエンドエンジニアのOtonoが制作したポートフォリオです。",
 };
 
-export const Top = () => {
+type TopProps = {
+  blogList: BlogListType;
+};
+
+export const Top = ({ blogList }: TopProps) => {
   return (
     <>
       <NextSeo
@@ -52,6 +59,14 @@ export const Top = () => {
               <span>Skills</span>
             </h2>
             <TagList data={Skills} />
+          </section>
+          <section className="mt-20 flex flex-col items-center gap-20">
+            <h2 className="flex items-center gap-4 text-24 font-bold">
+              <RssFeedIcon sx={{ fontSize: 26 }} />
+              <span>Blog</span>
+            </h2>
+            <p>文章を書くのが好きで、時おり記事を書いています。</p>
+            <BlogList data={blogList} />
           </section>
           <section className="mt-20 flex flex-col items-center gap-20">
             <h2 className="flex items-center gap-4 text-24 font-bold">
