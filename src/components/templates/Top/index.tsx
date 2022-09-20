@@ -1,7 +1,9 @@
+import { Button } from "@/components/atoms/Button";
 import { Mv } from "@/components/atoms/Mv";
 import { TagList } from "@/components/molecules/TagList";
 import { Skills } from "@/data/skills";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import EmailIcon from "@mui/icons-material/Email";
 import HandymanIcon from "@mui/icons-material/Handyman";
 import { NextSeo } from "next-seo";
 
@@ -45,6 +47,15 @@ export const Top = () => {
               <span>Skills</span>
             </h2>
             <TagList data={Skills} />
+          </section>
+          <section className="mt-20 flex flex-col items-center gap-20">
+            <h2 className="flex items-center gap-4 text-24 font-bold">
+              <EmailIcon sx={{ fontSize: 26 }} />
+              <span>Contact</span>
+            </h2>
+            <p>
+              <Button href="https://docs.google.com/forms/d/18JeZHlJaTIUSL1EAYyj-deiDUZyunvoxNB09m-IPDFw/viewform?edit_requested=true">お問い合わせはこちら</Button>
+            </p>
           </section>
         </section>
       </main>
