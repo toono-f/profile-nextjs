@@ -2,6 +2,6 @@
   "extends": ["next/core-web-vitals", "eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier", "plugin:storybook/recommended"],
   "ignorePatterns": ["*.config.js"],
   "rules": {
-    "@next/next/no-img-element": "off"
+    "@next/next/no-img-element": "off" // next/image以外も利用を許可
   }
 }
