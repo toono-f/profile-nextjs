@@ -14,6 +14,11 @@ export const Footer = () => {
             </a>
           </li>
           <li>
+            <a href="https://zenn.dev/toono_f" target="_blank" rel="noreferrer">
+              <img className="h-34 w-34" src="/images/common/zenn.svg" alt="Zenn" />
+            </a>
+          </li>
+          <li>
             <a href="https://github.com/toono-f" target="_blank" rel="noreferrer">
               <GitHubIcon sx={{ color: "#fff", fontSize: 40 }} />
             </a>
