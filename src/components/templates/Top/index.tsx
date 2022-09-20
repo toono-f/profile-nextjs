@@ -1,6 +1,8 @@
 import { Mv } from "@/components/atoms/Mv";
 import { TagList } from "@/components/molecules/TagList";
 import { Skills } from "@/data/skills";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import HandymanIcon from "@mui/icons-material/Handyman";
 import { NextSeo } from "next-seo";
 
 export const Top = () => {
@@ -16,8 +18,11 @@ export const Top = () => {
       />
       <main className="py-100 sp:py-50">
         <Mv />
-        <section className="mx-auto mt-30 flex max-w-[1000px] flex-col items-center gap-20 text-center sp:px-20 sp:text-left">
-          <h1 className="text-28 font-bold">About me</h1>
+        <section className="mx-auto mt-30 flex max-w-[1000px] flex-col items-center gap-20 px-20 text-center sp:text-left">
+          <h1 className="flex items-center gap-4 text-28 font-bold">
+            <AccountCircleIcon sx={{ fontSize: 30 }} />
+            <span>About me</span>
+          </h1>
           <p>
             1993年生まれ。北海道出身、東京在住のWebエンジニア。
             <br className="sp:hidden" />
@@ -35,7 +40,10 @@ export const Top = () => {
             美味しいケーキを食べに行くのが好きです。
           </p>
           <section className="mt-20 flex flex-col items-center gap-20">
-            <h2 className="text-24 font-bold">Skills</h2>
+            <h2 className="flex items-center gap-4 text-24 font-bold">
+              <HandymanIcon sx={{ fontSize: 26 }} />
+              <span>Skills</span>
+            </h2>
             <TagList data={Skills} />
           </section>
         </section>
