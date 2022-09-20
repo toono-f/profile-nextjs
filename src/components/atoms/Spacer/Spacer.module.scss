@@ -1,0 +1,41 @@
+.space_xs {
+  height: 10px;
+  @media screen and (max-width: 768px) {
+    height: 5px;
+  }
+}
+
+.space_sm {
+  height: 20px;
+  @media screen and (max-width: 768px) {
+    height: 15px;
+  }
+}
+
+.space_md {
+  height: 40px;
+  @media screen and (max-width: 768px) {
+    height: 30px;
+  }
+}
+
+.space_lg {
+  height: 60px;
+  @media screen and (max-width: 768px) {
+    height: 40px;
+  }
+}
+
+.space_xl {
+  height: 80px;
+  @media screen and (max-width: 768px) {
+    height: 60px;
+  }
+}
+
+.space_xxl {
+  height: 100px;
+  @media screen and (max-width: 768px) {
+    height: 80px;
+  }
+}
