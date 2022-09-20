@@ -1,3 +1,4 @@
+import { ZennIcon } from "@/components/atoms/ZennIcon";
 import styles from "@/components/organisms/Footer/Footer.module.scss";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -10,17 +11,17 @@ export const Footer = () => {
         <ul className={styles.snslist}>
           <li>
             <a href="https://twitter.com/OtonoFrontEnd" target="_blank" rel="noreferrer">
-              <TwitterIcon sx={{ color: "#1976d2", fontSize: 40 }} />
+              <TwitterIcon titleAccess="Twitter" sx={{ color: "#1976d2", fontSize: 40 }} />
             </a>
           </li>
           <li>
             <a href="https://zenn.dev/toono_f" target="_blank" rel="noreferrer">
-              <img className="h-34 w-34" src="/images/common/zenn.svg" alt="Zenn" />
+              <ZennIcon />
             </a>
           </li>
           <li>
             <a href="https://github.com/toono-f" target="_blank" rel="noreferrer">
-              <GitHubIcon sx={{ color: "#fff", fontSize: 40 }} />
+              <GitHubIcon titleAccess="Github" sx={{ color: "#fff", fontSize: 40 }} />
             </a>
           </li>
         </ul>
