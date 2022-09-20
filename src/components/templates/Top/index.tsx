@@ -16,7 +16,7 @@ export const Top = () => {
           description: "フロントエンドエンジニアのOtonoが制作したポートフォリオです。",
         }}
       />
-      <main className="py-100 sp:py-50">
+      <main className="pb-100 pt-120 sp:pb-50 sp:pt-70">
         <Mv />
         <section className="mx-auto mt-30 flex max-w-[1000px] flex-col items-center gap-20 px-20 text-center sp:text-left">
           <h1 className="flex items-center gap-4 text-28 font-bold">

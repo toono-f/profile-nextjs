@@ -1,0 +1,39 @@
+.footer {
+  padding: 40px 24px;
+  background-color: #333;
+}
+
+.sns {
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.snsText {
+  padding-bottom: 8px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.snslist {
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 24px;
+  justify-content: center;
+  margin-top: 24px;
+  a {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.copy {
+  margin-top: 24px;
+  font-size: 20px;
+  color: #ccc;
+  text-align: center;
+}
