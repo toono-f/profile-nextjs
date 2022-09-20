@@ -7,15 +7,20 @@ import EmailIcon from "@mui/icons-material/Email";
 import HandymanIcon from "@mui/icons-material/Handyman";
 import { NextSeo } from "next-seo";
 
+const meta = {
+  title: "Otono's Portfolio",
+  description: "フロントエンドエンジニアのOtonoが制作したポートフォリオです。",
+};
+
 export const Top = () => {
   return (
     <>
       <NextSeo
-        title="Otono's Portfolio"
-        description="フロントエンドエンジニアのOtonoが制作したポートフォリオです。"
+        title={meta.title}
+        description={meta.description}
         openGraph={{
-          title: "Otono's Portfolio",
-          description: "フロントエンドエンジニアのOtonoが制作したポートフォリオです。",
+          title: meta.title,
+          description: meta.description,
         }}
       />
       <main className="pb-100 pt-120 sp:pb-50 sp:pt-70">
@@ -53,8 +58,9 @@ export const Top = () => {
               <EmailIcon sx={{ fontSize: 26 }} />
               <span>Contact</span>
             </h2>
+            <p>仕事の依頼等、何かありましたら気軽にお問い合わせください。</p>
             <p>
-              <Button href="https://docs.google.com/forms/d/18JeZHlJaTIUSL1EAYyj-deiDUZyunvoxNB09m-IPDFw/viewform?edit_requested=true">お問い合わせはこちら</Button>
+              <Button href="https://docs.google.com/forms/d/18JeZHlJaTIUSL1EAYyj-deiDUZyunvoxNB09m-IPDFw/viewform?edit_requested=true">お問い合わせ</Button>
             </p>
           </section>
         </section>
