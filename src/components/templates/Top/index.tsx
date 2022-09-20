@@ -32,35 +32,35 @@ export const Top = ({ blogList }: TopProps) => {
       />
       <main className="pb-100 pt-120 sp:pb-50 sp:pt-70">
         <Mv />
-        <section className="mx-auto mt-30 flex max-w-[1000px] flex-col items-center gap-20 px-20 text-center sp:text-left">
-          <h1 className="flex items-center gap-4 text-28 font-bold">
-            <AccountCircleIcon sx={{ fontSize: 30 }} />
-            <span>About me</span>
+        <section className="mx-auto mt-30 flex max-w-[1000px] flex-col items-center px-20 text-center sp:text-left">
+          <h1 className="flex items-center gap-4 text-24 font-bold">
+            <AccountCircleIcon sx={{ fontSize: 26 }} />
+            <span>About</span>
           </h1>
-          <p>
+          <p className="mt-20">
             1993年生まれ。北海道出身、東京在住のWebエンジニア。
             <br className="sp:hidden" />
             京都の大学を卒業後、Webメディア事業会社でのライティング、
             <br className="sp:hidden" />
             Web制作会社でコーダー（マークアップ）を経験し、
             <br className="sp:hidden" />
-            現在は自社開発企業でフロントエンドエンジニアとして就業中。
+            現在は自社開発でフロントエンドエンジニアとして就業中。
           </p>
-          <p>
+          <p className="mt-20">
             趣味はプロ野球観戦。好きな球団は北海道日本ハムファイターズ。
             <br className="sp:hidden" />
             休日は友人とチャットを繋げながらもくもく作業したり、
             <br className="sp:hidden" />
-            美味しいケーキを食べに行くのが好きです。
+            美味しいケーキを食べに行くのが好きです🎂
           </p>
-          <section className="mt-20 flex flex-col items-center gap-20">
+          <section className="mt-60 flex flex-col items-center gap-20">
             <h2 className="flex items-center gap-4 text-24 font-bold">
               <HandymanIcon sx={{ fontSize: 26 }} />
               <span>Skills</span>
             </h2>
             <TagList data={Skills} />
           </section>
-          <section className="mt-20 flex flex-col items-center gap-20">
+          <section className="mt-60 flex flex-col items-center gap-20">
             <h2 className="flex items-center gap-4 text-24 font-bold">
               <RssFeedIcon sx={{ fontSize: 26 }} />
               <span>Blog</span>
@@ -68,7 +68,7 @@ export const Top = ({ blogList }: TopProps) => {
             <p>文章を書くのが好きで、時おり記事を書いています。</p>
             <BlogList data={blogList} />
           </section>
-          <section className="mt-20 flex flex-col items-center gap-20">
+          <section className="mt-60 flex flex-col items-center gap-20">
             <h2 className="flex items-center gap-4 text-24 font-bold">
               <EmailIcon sx={{ fontSize: 26 }} />
               <span>Contact</span>
