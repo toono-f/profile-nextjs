@@ -2,30 +2,39 @@ import { BasicLayout } from "@/components/layouts/BasicLayout";
 import { BlogDetail } from "@/components/templates/BlogDetail";
 import { client } from "@/lib/client";
 import { NextPageWithLayout } from "@/lib/next/types";
-import { BlogType } from "@/types/api";
-import { GetServerSideProps } from "next";
+import { BlogListType, BlogType } from "@/types/api";
+import { GetStaticPaths, GetStaticProps } from "next";
 
-export const getServerSideProps: GetServerSideProps = async (content) => {
-  const id = content.query.id;
+type dataType = {
+  contents: BlogListType;
+};
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const data: dataType = await client.get({ endpoint: "blogs" });
+  const paths = data.contents.map((content) => `/blog/${content.id}`);
+  return { paths, fallback: false };
+};
+
+type PageProps = {
+  data: BlogType;
+};
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const id = context.params?.id;
   const idExceptArray = Array.isArray(id) ? id[0] : id;
-  const data = await client.get({
+  const data: PageProps = await client.get({
     endpoint: "blogs",
     contentId: idExceptArray,
   });
-
   return {
     props: {
-      blog: data,
+      data: data,
     },
   };
 };
 
-type PageProps = {
-  blog: BlogType;
-};
-
-const Page: NextPageWithLayout<PageProps> = ({ blog }) => {
-  return <BlogDetail blog={blog} />;
+const Page: NextPageWithLayout<PageProps> = ({ data }) => {
+  return <BlogDetail data={data} />;
 };
 
 Page.getLayout = BasicLayout;

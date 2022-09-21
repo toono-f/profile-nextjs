@@ -9,14 +9,14 @@ const meta = {
 };
 
 type BlogDetailProps = {
-  blog: BlogType;
+  data: BlogType;
 };
 
-export const BlogDetail = ({ blog }: BlogDetailProps) => {
+export const BlogDetail = ({ data }: BlogDetailProps) => {
   return (
     <>
       <NextSeo
-        title={`${blog.title} | ${meta.title}`}
+        title={`${data.title} | ${meta.title}`}
         description={meta.description}
         openGraph={{
           title: meta.title,
@@ -24,7 +24,7 @@ export const BlogDetail = ({ blog }: BlogDetailProps) => {
         }}
       />
       <main className="py-100 px-20 ">
-        {/* <Article data={blog} /> */}
+        {/* <Article data={data} /> */}
         <p className="text-center">準備中です。</p>
         <p className="mt-20 text-center">
           <Link href="/">
