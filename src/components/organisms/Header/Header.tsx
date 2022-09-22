@@ -1,16 +1,16 @@
 import styles from "@/components/organisms/Header/Header.module.scss";
 import Link from "next/link";
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 // import { useState } from "react";
 
 export const Header = () => {
   // const [isOpen, setIsOpen] = useState<boolean>(false);
-  const router = useRouter();
+  // const router = useRouter();
 
   // useEffect(() => setIsOpen(false), [router]);
 
   return (
-    <header className={router.pathname === "/" ? styles.header_color : styles.header}>
+    <header className={styles.header}>
       <h1 className={styles.title}>
         <Link href="/">
           <a>Otono&apos;s portfolio</a>

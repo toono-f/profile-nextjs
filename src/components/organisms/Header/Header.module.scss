@@ -5,12 +5,9 @@
   justify-content: flex-end;
   width: 100%;
   padding: 24px 32px 16px;
+  color: #fff;
   @media screen and (max-width: 767px) {
     padding: 16px 20px;
-  }
-  &_color {
-    @extend .header;
-    color: #fff;
   }
 }
 
