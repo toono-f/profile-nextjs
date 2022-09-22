@@ -1,4 +1,4 @@
-// import { Article } from "@/components/organisms/Article";
+import { Article } from "@/components/organisms/Article";
 import { BlogType } from "@/types/api";
 import { NextSeo } from "next-seo";
 import Link from "next/link";
@@ -24,9 +24,8 @@ export const BlogDetail = ({ data }: BlogDetailProps) => {
         }}
       />
       <main className="py-100 px-20 ">
-        {/* <Article data={data} /> */}
-        <p className="text-center">準備中です。</p>
-        <p className="mt-20 text-center">
+        <Article data={data} />
+        <p className="mt-40 text-center">
           <Link href="/">
             <a className="underline">TOPに戻る</a>
           </Link>
