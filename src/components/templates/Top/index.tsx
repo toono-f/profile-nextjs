@@ -65,7 +65,6 @@ export const Top = ({ blogList }: TopProps) => {
               <RssFeedIcon sx={{ fontSize: 26 }} />
               <span>Blog</span>
             </h2>
-            <p>文章を書くのが好きで、時おり記事を書いています。</p>
             <BlogList data={blogList} />
           </section>
           <section className="mt-60 flex flex-col items-center gap-20">
