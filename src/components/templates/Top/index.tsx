@@ -34,10 +34,10 @@ export const Top = ({ blogList }: TopProps) => {
       <main className="pb-100 pt-120 sp:pb-50 sp:pt-70">
         <Mv />
         <section className="mx-auto mt-30 flex max-w-[1000px] flex-col items-center px-20 text-center sp:text-left">
-          <h1 className="flex items-center gap-4 text-24 font-bold">
+          <Title>
             <AccountCircleIcon sx={{ fontSize: 26 }} />
             <span>About</span>
-          </h1>
+          </Title>
           <p className="mt-20 leading-lg">
             1993年生まれ。北海道出身、東京在住のWebエンジニア。
             <br className="sp:hidden" />
