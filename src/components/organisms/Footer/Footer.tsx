@@ -15,13 +15,13 @@ export const Footer = () => {
             </a>
           </li>
           <li>
-            <a href="https://zenn.dev/toono_f" target="_blank" rel="noreferrer">
-              <ZennIcon />
+            <a href="https://github.com/toono-f" target="_blank" rel="noreferrer">
+              <GitHubIcon titleAccess="Github" sx={{ color: "#fff", fontSize: 40 }} />
             </a>
           </li>
           <li>
-            <a href="https://github.com/toono-f" target="_blank" rel="noreferrer">
-              <GitHubIcon titleAccess="Github" sx={{ color: "#fff", fontSize: 40 }} />
+            <a href="https://zenn.dev/toono_f" target="_blank" rel="noreferrer">
+              <ZennIcon />
             </a>
           </li>
         </ul>
