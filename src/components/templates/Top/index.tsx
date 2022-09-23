@@ -37,7 +37,7 @@ export const Top = ({ blogList }: TopProps) => {
             <AccountCircleIcon sx={{ fontSize: 26 }} />
             <span>About</span>
           </h1>
-          <p className="mt-20">
+          <p className="mt-20 leading-lg">
             1993年生まれ。北海道出身、東京在住のWebエンジニア。
             <br className="sp:hidden" />
             京都の大学を卒業後、Webメディア事業会社でのライティング、
@@ -46,7 +46,7 @@ export const Top = ({ blogList }: TopProps) => {
             <br className="sp:hidden" />
             現在は自社開発でフロントエンドエンジニアとして就業中。
           </p>
-          <p className="mt-20">
+          <p className="mt-20 leading-lg">
             趣味はプロ野球観戦。好きな球団は北海道日本ハムファイターズ。
             <br className="sp:hidden" />
             休日は友人とチャットを繋げながらもくもく作業したり、
@@ -72,7 +72,7 @@ export const Top = ({ blogList }: TopProps) => {
               <EmailIcon sx={{ fontSize: 26 }} />
               <span>Contact</span>
             </h2>
-            <p>仕事の依頼等、何かありましたら気軽にお問い合わせください。</p>
+            <p className="leading-lg">仕事の依頼等、何かありましたら気軽にお問い合わせください。</p>
             <p>
               <Button href="https://docs.google.com/forms/d/18JeZHlJaTIUSL1EAYyj-deiDUZyunvoxNB09m-IPDFw/viewform?edit_requested=true">お問い合わせ</Button>
             </p>
