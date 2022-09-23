@@ -1,5 +1,6 @@
 import { Button } from "@/components/atoms/Button";
 import { Mv } from "@/components/atoms/Mv";
+import { Title } from "@/components/atoms/Title";
 import { BlogList } from "@/components/molecules/BlogList";
 import { TagList } from "@/components/molecules/TagList";
 import { Skills } from "@/data/skills";
@@ -54,24 +55,24 @@ export const Top = ({ blogList }: TopProps) => {
             美味しいケーキを食べに行くのが好きです🎂
           </p>
           <section className="mt-60 flex flex-col items-center gap-20">
-            <h2 className="flex items-center gap-4 text-24 font-bold">
+            <Title>
               <HandymanIcon sx={{ fontSize: 26 }} />
               <span>Skills</span>
-            </h2>
+            </Title>
             <TagList data={Skills} />
           </section>
           <section className="mt-60 flex flex-col items-center gap-20">
-            <h2 className="flex items-center gap-4 text-24 font-bold">
+            <Title>
               <RssFeedIcon sx={{ fontSize: 26 }} />
               <span>Blog</span>
-            </h2>
+            </Title>
             <BlogList data={blogList} />
           </section>
           <section className="mt-60 flex flex-col items-center gap-20">
-            <h2 className="flex items-center gap-4 text-24 font-bold">
+            <Title>
               <EmailIcon sx={{ fontSize: 26 }} />
               <span>Contact</span>
-            </h2>
+            </Title>
             <p className="leading-lg">仕事の依頼等、何かありましたら気軽にお問い合わせください。</p>
             <p>
               <Button href="https://docs.google.com/forms/d/18JeZHlJaTIUSL1EAYyj-deiDUZyunvoxNB09m-IPDFw/viewform?edit_requested=true">お問い合わせ</Button>
