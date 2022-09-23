@@ -74,9 +74,7 @@ export const Top = ({ blogList }: TopProps) => {
               <span>Contact</span>
             </Title>
             <p className="leading-lg">仕事の依頼等、何かありましたら気軽にお問い合わせください。</p>
-            <p>
-              <Button href="https://docs.google.com/forms/d/18JeZHlJaTIUSL1EAYyj-deiDUZyunvoxNB09m-IPDFw/viewform?edit_requested=true">お問い合わせ</Button>
-            </p>
+            <Button href="https://docs.google.com/forms/d/18JeZHlJaTIUSL1EAYyj-deiDUZyunvoxNB09m-IPDFw/viewform?edit_requested=true">お問い合わせ</Button>
           </section>
         </section>
       </main>
