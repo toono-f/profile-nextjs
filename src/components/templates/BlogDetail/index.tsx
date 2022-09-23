@@ -3,9 +3,9 @@ import { Article } from "@/components/organisms/Article";
 import { BlogType } from "@/types/api";
 import { NextSeo } from "next-seo";
 
-const meta = {
-  title: "Otono's Portfolio",
-  description: "フロントエンドエンジニアのOtonoによるブログ記事です。",
+const Meta = {
+  description: "フロントエンドエンジニアのおとのによるブログ記事です。",
+  type: "article",
 };
 
 type BlogDetailProps = {
@@ -16,11 +16,12 @@ export const BlogDetail = ({ data }: BlogDetailProps) => {
   return (
     <>
       <NextSeo
-        title={`${data.title} | ${meta.title}`}
-        description={meta.description}
+        title={data.title}
+        description={Meta.description}
         openGraph={{
-          title: meta.title,
-          description: meta.description,
+          title: data.title,
+          description: Meta.description,
+          type: Meta.type,
         }}
       />
       <main className="py-100 px-20 ">
