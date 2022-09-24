@@ -24,7 +24,7 @@ export const BlogDetail = ({ data }: BlogDetailProps) => {
           type: Meta.type,
         }}
       />
-      <main className="py-100 px-20 ">
+      <main className="py-100 px-20">
         <Article data={data} />
         <p className="mt-40 text-center">
           <Button href="/">TOPに戻る</Button>
