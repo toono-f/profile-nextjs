@@ -3,7 +3,7 @@ import { Mv } from "@/components/atoms/Mv";
 import { Title } from "@/components/atoms/Title";
 import { BlogList } from "@/components/molecules/BlogList";
 import { TagList } from "@/components/molecules/TagList";
-import { Skills } from "@/data/skills";
+import { Skills } from "@/data/Skills";
 import { BlogListType } from "@/types/api";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import EmailIcon from "@mui/icons-material/Email";
