@@ -1,7 +1,7 @@
 import styles from "@/components/layouts/BasicLayout/BasicLayout.module.scss";
 import { Footer } from "@/components/organisms/Footer";
 import { Header } from "@/components/organisms/Header";
-import { Seo } from "@/data/seo";
+import { Seo } from "@/data/Seo";
 import { NextSeo } from "next-seo";
 import { ReactElement } from "react";
 
