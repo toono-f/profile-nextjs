@@ -1,3 +1,4 @@
+import styles from "@/components/atoms/Title/Title.module.scss";
 import { ReactNode } from "react";
 
 type TitleProps = {
@@ -5,5 +6,5 @@ type TitleProps = {
 };
 
 export const Title = ({ children }: TitleProps) => {
-  return <h2 className="flex items-center gap-4 text-24 font-bold">{children}</h2>;
+  return <h2 className={styles.title}>{children}</h2>;
 };
