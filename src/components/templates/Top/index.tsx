@@ -3,7 +3,7 @@ import { Mv } from "@/components/atoms/Mv";
 import { Title } from "@/components/atoms/Title";
 import { BlogList } from "@/components/molecules/BlogList";
 import { TagList } from "@/components/molecules/TagList";
-import { skills } from "@/data/skills";
+import { Skills } from "@/data/Skills";
 import { BlogListType } from "@/types/api";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import EmailIcon from "@mui/icons-material/Email";
@@ -44,7 +44,7 @@ export const Top = ({ blogList }: TopProps) => {
             <HandymanIcon sx={{ fontSize: 26 }} />
             <span>Skills</span>
           </Title>
-          <TagList data={skills} />
+          <TagList data={Skills} />
         </section>
         <section className="mt-60 flex flex-col items-center gap-20">
           <Title>

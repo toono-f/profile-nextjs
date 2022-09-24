@@ -1,4 +1,4 @@
-export const skills = [
+export const Skills = [
   { name: "HTML/CSS" },
   { name: "JavaScript" },
   { name: "TypeScript" },
