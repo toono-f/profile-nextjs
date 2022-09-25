@@ -3,6 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   async rewrites() {
+    // 本番環境以外を想定
     return [
       {
         source: "/api/:path*",
