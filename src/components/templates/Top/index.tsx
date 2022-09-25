@@ -4,12 +4,12 @@ import { Title } from "@/components/atoms/Title";
 import { BlogList } from "@/components/molecules/BlogList";
 import { TagList } from "@/components/molecules/TagList";
 import { Skills } from "@/data/Skills";
-// import { fetcher } from "@/hooks/fecther";
 import { BlogListType } from "@/types/api";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import EmailIcon from "@mui/icons-material/Email";
 import HandymanIcon from "@mui/icons-material/Handyman";
 import RssFeedIcon from "@mui/icons-material/RssFeed";
+// import { fetcher } from "@/hooks/fecther";
 // import useSWR from "swr";
 
 type TopProps = {
