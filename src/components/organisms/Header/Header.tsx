@@ -13,7 +13,7 @@ export const Header = () => {
     <header className={styles.header}>
       <h1 className={styles.title}>
         {router.pathname === "/" ? (
-          <span>Otono&apos;s portfoli</span>
+          <span>Otono&apos;s portfolio</span>
         ) : (
           <Link href="/">
             <a>Otono&apos;s portfolio</a>
