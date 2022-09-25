@@ -1,3 +1,4 @@
+// BlogType
 export type BlogType = {
   id: string;
   createdAt: string;
@@ -15,3 +16,14 @@ export type BlogType = {
 };
 
 export type BlogListType = BlogType[];
+
+// UserType
+// export type UsersType = {
+//   users: [
+//     {
+//       name: string;
+//       age: number;
+//       hobby: string;
+//     }
+//   ];
+// };

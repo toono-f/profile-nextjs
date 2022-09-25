@@ -4,17 +4,21 @@ import { Title } from "@/components/atoms/Title";
 import { BlogList } from "@/components/molecules/BlogList";
 import { TagList } from "@/components/molecules/TagList";
 import { Skills } from "@/data/Skills";
+// import { fetcher } from "@/hooks/fecther";
 import { BlogListType } from "@/types/api";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import EmailIcon from "@mui/icons-material/Email";
 import HandymanIcon from "@mui/icons-material/Handyman";
 import RssFeedIcon from "@mui/icons-material/RssFeed";
+// import useSWR from "swr";
 
 type TopProps = {
   blogList: BlogListType;
 };
 
 export const Top = ({ blogList }: TopProps) => {
+  // const { data } = useSWR<UsersType>(`${process.env.NEXT_PUBLIC_API_PATH}/users`, fetcher);
+
   return (
     <main className="pb-100 pt-120 sp:pb-50 sp:pt-70">
       <Mv />
@@ -23,6 +27,11 @@ export const Top = ({ blogList }: TopProps) => {
           <AccountCircleIcon sx={{ fontSize: 26 }} />
           <span>About</span>
         </Title>
+
+        {/* {data?.users.map((item, key) => {
+          return <p key={key}>{item.age}</p>;
+        })} */}
+
         <p className="mt-20 leading-lg">
           1993年生まれ。北海道出身、東京在住のWebエンジニア。
           <br className="sp:hidden" />
