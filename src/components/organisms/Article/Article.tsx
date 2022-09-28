@@ -10,7 +10,7 @@ export const Article = ({ data }: ArticleProps) => {
     <article className={styles.article}>
       <h1 className={styles.title}>{data.title}</h1>
       <p className={styles.thumbnail}>
-        <img src={data.eyecatch.url} alt="" />
+        <img src={data.eyecatch.url} alt="" decoding="async" />
       </p>
       <div className={styles.content} dangerouslySetInnerHTML={{ __html: data.content }}></div>
     </article>

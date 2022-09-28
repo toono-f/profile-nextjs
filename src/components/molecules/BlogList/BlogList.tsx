@@ -13,7 +13,7 @@ export const BlogList = ({ data }: blogListProps) => {
         <li key={index} className={styles.item}>
           <Link href={`/blog/${item.id}/`}>
             <a className={styles.link}>
-              <img src={item.eyecatch.url} alt="" />
+              <img src={item.eyecatch.url} alt="" decoding="async" />
               <p className={styles.text}>{item.title}</p>
             </a>
           </Link>
