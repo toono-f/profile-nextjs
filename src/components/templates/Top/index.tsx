@@ -1,14 +1,12 @@
 import { Button } from "@/components/atoms/Button";
 import { Mv } from "@/components/atoms/Mv";
 import { Title } from "@/components/atoms/Title";
-import { BlogList } from "@/components/molecules/BlogList";
 import { TagList } from "@/components/molecules/TagList";
 import { Skills } from "@/data/Skills";
 import { BlogListType } from "@/types/api";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import EmailIcon from "@mui/icons-material/Email";
 import HandymanIcon from "@mui/icons-material/Handyman";
-import RssFeedIcon from "@mui/icons-material/RssFeed";
 // import { fetcher } from "@/hooks/fecther";
 // import useSWR from "swr";
 
@@ -55,13 +53,15 @@ export const Top = ({ blogList }: TopProps) => {
           </Title>
           <TagList data={Skills} />
         </section>
-        <section className="mt-60 flex flex-col items-center gap-20">
+
+        {/* <section className="mt-60 flex flex-col items-center gap-20">
           <Title>
             <RssFeedIcon sx={{ fontSize: 26 }} />
             <span>Blog</span>
           </Title>
           <BlogList data={blogList} />
-        </section>
+        </section> */}
+
         <section className="mt-60 flex flex-col items-center gap-20">
           <Title>
             <EmailIcon sx={{ fontSize: 26 }} />
