@@ -46,7 +46,7 @@ export const Top = ({ blogList }: TopProps) => {
           <br className="sp:hidden" />
           休日は友人とチャットを繋げながらもくもく作業したり、
           <br className="sp:hidden" />
-          美味しいケーキを食べに行くのが好きです🎂
+          美味しいケーキを食べに行くのが好きです。
         </p>
         <section className="mt-60 flex flex-col items-center gap-20">
           <Title>
