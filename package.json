@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build && next export",
     "start": "next start",
-    "test": "jest --watch",
+    "test": "jest",
     "lint": "next lint",
     "tsc": "tsc --noEmit",
     "storybook": "start-storybook -p 6006",
