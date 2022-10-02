@@ -33,4 +33,12 @@ module.exports = [
     enabled: "はい",
     initial: true,
   },
+  {
+    type: "toggle",
+    name: "withTest",
+    message: ".spec.tsxも一緒に作成しますか？",
+    disabled: "いいえ",
+    enabled: "はい",
+    initial: true,
+  },
 ];
