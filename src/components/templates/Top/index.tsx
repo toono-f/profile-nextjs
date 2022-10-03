@@ -2,11 +2,13 @@ import { Button } from "@/components/atoms/Button";
 import { Mv } from "@/components/atoms/Mv";
 import { Title } from "@/components/atoms/Title";
 import { TagList } from "@/components/molecules/TagList";
+import { MovieModal } from "@/components/organisms/MovieModal";
 import { Skills } from "@/data/Skills";
 import { BlogListType } from "@/types/api";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import EmailIcon from "@mui/icons-material/Email";
 import HandymanIcon from "@mui/icons-material/Handyman";
+import { useState } from "react";
 // import { fetcher } from "@/hooks/fecther";
 // import useSWR from "swr";
 
@@ -16,6 +18,8 @@ type TopProps = {
 
 export const Top = ({ blogList }: TopProps) => {
   // const { data } = useSWR<UsersType>(`${process.env.NEXT_PUBLIC_API_PATH}/users`, fetcher);
+
+  const [play, isPlay] = useState<boolean>(false);
 
   return (
     <main className="pb-100 pt-120 sp:pb-50 sp:pt-70">
@@ -40,7 +44,10 @@ export const Top = ({ blogList }: TopProps) => {
           現在は自社開発でフロントエンドエンジニアとして就業中。
         </p>
         <p className="mt-20 leading-lg">
-          趣味はプロ野球観戦。好きな球団は北海道日本ハムファイターズ。
+          趣味はプロ野球観戦。好きな球団は
+          <button className="underline" onClick={() => isPlay(true)}>
+            北海道日本ハムファイターズ。
+          </button>
           <br className="sp:hidden" />
           休日は友人とチャットを繋げながらもくもく作業したり、
           <br className="sp:hidden" />
@@ -70,6 +77,8 @@ export const Top = ({ blogList }: TopProps) => {
           <p className="leading-lg">仕事の依頼等、何かありましたら気軽にお問い合わせください。</p>
           <Button href="https://docs.google.com/forms/d/18JeZHlJaTIUSL1EAYyj-deiDUZyunvoxNB09m-IPDFw/viewform?edit_requested=true">お問い合わせ</Button>
         </section>
+
+        <MovieModal id="XgDWlvNXtG8" play={play} isPlay={isPlay} />
       </section>
     </main>
   );

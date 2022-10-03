@@ -1,0 +1,140 @@
+@use "sass:math";
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@function sizeCalc($size, $base: 16) {
+  @return math.div($size, $base);
+}
+
+@function rem($size) {
+  @return sizeCalc($size) + rem;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 101;
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden;
+  background-color: rgba(#000, 0.5);
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+}
+
+.modal_box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 90%;
+  visibility: hidden;
+  background-color: #fff;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  animation: fadeIn 0.3s forwards;
+  @media screen and (max-width: 767px) {
+    width: calc(100% - #{rem(15 * 2)});
+    max-width: 100%;
+  }
+}
+
+.modal_close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(60);
+  height: rem(60);
+  transform: translate(50%, -100%);
+  @media screen and (max-width: 767px) {
+    width: rem(30);
+    height: rem(30);
+  }
+  &:hover {
+    opacity: 0.7;
+  }
+  &:before,
+  &:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 2px;
+    height: 30px;
+    content: "";
+    background-color: #fff;
+    @media screen and (max-width: 767px) {
+      width: 1px;
+      height: 20px;
+    }
+  }
+  &:before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  &:after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+.modal_movie {
+  position: relative;
+  width: rem(700);
+  padding-top: calc(315 / 560 * 100%);
+  overflow: hidden;
+  background-color: #000;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: inline-block;
+    width: rem(50);
+    height: rem(50);
+    content: "";
+    background: transparent !important;
+    background-color: #fff;
+    border: rem(2) solid #fff;
+    border-bottom-color: transparent;
+    border-radius: 100%;
+    animation: rotate 0.75s 0s linear infinite;
+    animation-fill-mode: both;
+    @media screen and (max-width: 767px) {
+      width: rem(30);
+      height: rem(30);
+    }
+  }
+}
