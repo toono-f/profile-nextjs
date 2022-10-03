@@ -12,6 +12,6 @@ const { Default } = composeStories(stories);
 describe("src/components/<%= path %>/<%= name %>/<%= name %>.tsx", () => {
   test("<%= path %> である", () => {
     const { container } = render(<Default />);
-    expect(container).toBe<%= path.charAt(0).toUpperCase() + path.slice(1); %>();
+    expect(container).toBe<%= (path.charAt(0).toUpperCase() + path.slice(1)).slice(0, -1); %>();
   });
 });
