@@ -6,16 +6,16 @@ const inputValidator = (input) => {
 
 module.exports = [
   {
-    type: "input",
-    name: "name",
-    message: "コンポーネント名をパスカルケースで入力してください(例: ButtonSample)",
-    validate: inputValidator,
-  },
-  {
     type: "select",
     name: "path",
     message: "コンポーネントの粒度を選択してください",
     choices: ["atoms", "molecules", "organisms", "templates", "layouts"],
+  },
+  {
+    type: "input",
+    name: "name",
+    message: "コンポーネント名をパスカルケースで入力してください(例: ButtonSample)",
+    validate: inputValidator,
   },
   {
     type: "toggle",
