@@ -12,10 +12,10 @@ module.exports = [
     validate: inputValidator,
   },
   {
-    type: "input",
+    type: "select",
     name: "path",
-    message: "src/components以下のパスを指定してください。ex) atoms",
-    validate: inputValidator,
+    message: "コンポーネントの種類を選択してください",
+    choices: ["atoms", "molecules", "organisms", "templates", "layouts"],
   },
   {
     type: "toggle",
