@@ -8,13 +8,13 @@ module.exports = [
   {
     type: "input",
     name: "name",
-    message: "コンポーネントの名前を指定してください。ex) Button",
+    message: "コンポーネント名をパスカルケースで入力してください(例: ButtonSample)",
     validate: inputValidator,
   },
   {
     type: "select",
     name: "path",
-    message: "コンポーネントの種類を選択してください",
+    message: "コンポーネントの粒度を選択してください",
     choices: ["atoms", "molecules", "organisms", "templates", "layouts"],
   },
   {
