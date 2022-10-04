@@ -1,9 +1,12 @@
 import { Tag } from "@/components/atoms/Tag";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
-export default { component: Tag } as ComponentMeta<typeof Tag>;
+type T = typeof Tag;
+type Story = ComponentStoryObj<T>;
 
-export const Index: ComponentStoryObj<typeof Tag> = {
+export default { component: Tag } as ComponentMeta<T>;
+
+export const Default: Story = {
   args: {
     name: "React",
   },
