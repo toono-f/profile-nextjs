@@ -1,8 +1,11 @@
 import { Mv } from "@/components/atoms/Mv";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
-export default { component: Mv } as ComponentMeta<typeof Mv>;
+type T = typeof Mv;
+type Story = ComponentStoryObj<T>;
 
-export const Index: ComponentStoryObj<typeof Mv> = {
+export default { component: Mv } as ComponentMeta<T>;
+
+export const Default: Story = {
   args: {},
 };
