@@ -1,9 +1,12 @@
 import { Title } from "@/components/atoms/Title";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
-export default { component: Title } as ComponentMeta<typeof Title>;
+type T = typeof Title;
+type Story = ComponentStoryObj<T>;
 
-export const Index: ComponentStoryObj<typeof Title> = {
+export default { component: Title } as ComponentMeta<T>;
+
+export const Default: Story = {
   args: {
     children: <span>タイトル</span>,
   },
