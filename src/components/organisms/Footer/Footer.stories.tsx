@@ -1,8 +1,11 @@
 import { Footer } from "@/components/organisms/Footer";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
-export default { component: Footer } as ComponentMeta<typeof Footer>;
+type T = typeof Footer;
+type Story = ComponentStoryObj<T>;
 
-export const Index: ComponentStoryObj<typeof Footer> = {
+export default { component: Footer } as ComponentMeta<T>;
+
+export const Default: Story = {
   args: {},
 };
