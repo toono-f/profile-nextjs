@@ -1,9 +1,12 @@
 import { Spacer } from "@/components/atoms/Spacer";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
-export default { component: Spacer } as ComponentMeta<typeof Spacer>;
+type T = typeof Spacer;
+type Story = ComponentStoryObj<T>;
 
-export const Index: ComponentStoryObj<typeof Spacer> = {
+export default { component: Spacer } as ComponentMeta<T>;
+
+export const Default: Story = {
   args: {
     size: "md",
   },
