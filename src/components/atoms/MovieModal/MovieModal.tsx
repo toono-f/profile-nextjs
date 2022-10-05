@@ -1,4 +1,4 @@
-import styles from "@/components/organisms/MovieModal/MovieModal.module.scss";
+import styles from "@/components/atoms/MovieModal/MovieModal.module.scss";
 import { Dispatch, SetStateAction } from "react";
 
 type MovieModalProps = {

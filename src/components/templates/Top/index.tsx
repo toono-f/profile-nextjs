@@ -1,8 +1,8 @@
 import { Button } from "@/components/atoms/Button";
+import { MovieModal } from "@/components/atoms/MovieModal";
 import { Mv } from "@/components/atoms/Mv";
 import { Title } from "@/components/atoms/Title";
 import { TagList } from "@/components/molecules/TagList";
-import { MovieModal } from "@/components/organisms/MovieModal";
 import { Skills } from "@/data/Skills";
 import { BlogListType } from "@/types/api";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
