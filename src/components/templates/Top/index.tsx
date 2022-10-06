@@ -2,14 +2,16 @@ import { Button } from "@/components/atoms/Button";
 import { MovieModal } from "@/components/atoms/MovieModal";
 import { Mv } from "@/components/atoms/Mv";
 import { Title } from "@/components/atoms/Title";
+import { BlogList } from "@/components/molecules/BlogList";
 import { TagList } from "@/components/molecules/TagList";
 import { Skills } from "@/data/Skills";
+// import { fetcher } from "@/hooks/fecther";
 import { BlogListType } from "@/types/api";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import EmailIcon from "@mui/icons-material/Email";
 import HandymanIcon from "@mui/icons-material/Handyman";
+import RssFeedIcon from "@mui/icons-material/RssFeed";
 import { useState } from "react";
-// import { fetcher } from "@/hooks/fecther";
 // import useSWR from "swr";
 
 type TopProps = {
@@ -61,13 +63,15 @@ export const Top = ({ blogList }: TopProps) => {
           <TagList data={Skills} />
         </section>
 
-        {/* <section className="mt-60 flex flex-col items-center gap-20">
-          <Title>
-            <RssFeedIcon sx={{ fontSize: 26 }} />
-            <span>Blog</span>
-          </Title>
-          <BlogList data={blogList} />
-        </section> */}
+        {blogList.length > 0 && (
+          <section className="mt-60 flex flex-col items-center gap-20">
+            <Title>
+              <RssFeedIcon sx={{ fontSize: 26 }} />
+              <span>Blog</span>
+            </Title>
+            <BlogList data={blogList} />
+          </section>
+        )}
 
         <section className="mt-60 flex flex-col items-center gap-20">
           <Title>
