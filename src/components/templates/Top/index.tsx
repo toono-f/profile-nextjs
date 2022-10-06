@@ -1,6 +1,7 @@
 import { Button } from "@/components/atoms/Button";
 import { MovieModal } from "@/components/atoms/MovieModal";
 import { Mv } from "@/components/atoms/Mv";
+import { Spacer } from "@/components/atoms/Spacer";
 import { Title } from "@/components/atoms/Title";
 import { BlogList } from "@/components/molecules/BlogList";
 import { TagList } from "@/components/molecules/TagList";
@@ -55,7 +56,10 @@ export const Top = ({ blogList }: TopProps) => {
           <br className="sp:hidden" />
           美味しいケーキを食べに行くのが好きです。
         </p>
-        <section className="mt-60 flex flex-col items-center gap-20">
+
+        <Spacer size="lg" />
+
+        <section className="flex flex-col items-center gap-20">
           <Title>
             <HandymanIcon sx={{ fontSize: 26 }} />
             <span>Skills</span>
@@ -64,16 +68,22 @@ export const Top = ({ blogList }: TopProps) => {
         </section>
 
         {blogList.length > 0 && (
-          <section className="mt-60 flex flex-col items-center gap-20">
-            <Title>
-              <RssFeedIcon sx={{ fontSize: 26 }} />
-              <span>Blog</span>
-            </Title>
-            <BlogList data={blogList} />
-          </section>
+          <>
+            <Spacer size="lg" />
+
+            <section className="flex flex-col items-center gap-20">
+              <Title>
+                <RssFeedIcon sx={{ fontSize: 26 }} />
+                <span>Blog</span>
+              </Title>
+              <BlogList data={blogList} />
+            </section>
+          </>
         )}
 
-        <section className="mt-60 flex flex-col items-center gap-20">
+        <Spacer size="lg" />
+
+        <section className="flex flex-col items-center gap-20">
           <Title>
             <EmailIcon sx={{ fontSize: 26 }} />
             <span>Contact</span>
