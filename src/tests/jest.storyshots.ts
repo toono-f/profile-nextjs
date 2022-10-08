@@ -2,5 +2,6 @@ import initStoryshots, { multiSnapshotWithOptions } from "@storybook/addon-story
 
 // アニメーションを活用したコンポーネントはスナップショットテストが失敗するので注意
 initStoryshots({
+  suite: "storyshots",
   test: multiSnapshotWithOptions(),
 });
