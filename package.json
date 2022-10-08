@@ -7,6 +7,7 @@
     "build": "next build && next export",
     "start": "next start",
     "test": "jest",
+    "storyshots": "jest --config ./jest.config.storyshots.js",
     "lint": "next lint",
     "tsc": "tsc --noEmit",
     "storybook": "start-storybook -p 6006",
@@ -14,6 +15,9 @@
     "tailwind-config-viewer": "tailwind-config-viewer -o",
     "hygen:component": "hygen component new",
     "hygen:page": "hygen page new"
+  },
+  "resolutions": {
+    "react-test-renderer": "18.1.0"
   },
   "dependencies": {
     "@emotion/react": "^11.10.4",
@@ -34,6 +38,7 @@
     "@storybook/addon-interactions": "^6.5.12",
     "@storybook/addon-links": "^6.5.12",
     "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/addon-storyshots": "^6.5.12",
     "@storybook/builder-webpack5": "^6.5.12",
     "@storybook/manager-webpack5": "^6.5.12",
     "@storybook/preset-scss": "^1.0.3",

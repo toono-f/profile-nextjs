@@ -1,4 +1,5 @@
 import { RouterContext } from "next/dist/shared/lib/router-context";
+import * as nextRouter from "next/router";
 import "../src/styles/globals.css";
 
 export const parameters = {
@@ -13,3 +14,8 @@ export const parameters = {
     Provider: RouterContext.Provider,
   },
 };
+
+// storyshots実行時に、useRouterを利用しているコンポーネントで実行エラーを出さないように設定
+nextRouter.useRouter = () => ({
+  Provider: RouterContext.Provider,
+});
