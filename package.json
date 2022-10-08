@@ -10,7 +10,7 @@
     "tsc": "tsc --noEmit",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "test": "jest",
+    "test:component-type": "jest",
     "storyshots": "jest --config ./jest.config.storyshots.js",
     "storyshots:image": "jest --config ./jest.config.storyshotsImage.js",
     "tailwind-config-viewer": "tailwind-config-viewer -o",
