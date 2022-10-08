@@ -11,6 +11,7 @@ const customJestConfig = {
     "^@/(.*)$": "<rootDir>/src/$1",
   },
   testEnvironment: "jest-environment-jsdom",
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
   testMatch: ["<rootDir>/src/tests/storybook/jest.storyshots.ts"],
 };
 
