@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`storyshots components/atoms/Tag Default 1`] = `
+<p
+  className="tag"
+>
+  React
+</p>
+`;

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`storyshots components/atoms/Title Default 1`] = `
+<h2
+  className="title"
+>
+  <span>
+    タイトル
+  </span>
+</h2>
+`;

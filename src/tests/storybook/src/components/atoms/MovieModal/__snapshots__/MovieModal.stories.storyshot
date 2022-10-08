@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`storyshots components/atoms/MovieModal Default 1`] = `null`;

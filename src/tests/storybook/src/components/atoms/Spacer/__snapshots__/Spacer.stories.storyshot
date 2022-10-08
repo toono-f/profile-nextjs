@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`storyshots components/atoms/Spacer Default 1`] = `
+<div
+  className="space_md"
+/>
+`;

@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`storyshots components/atoms/Mv Default 1`] = `
+<div
+  className="mv"
+>
+  <p
+    className="icon"
+  >
+    <img
+      alt=""
+      decoding="async"
+      height="300"
+      src="/images/index/mv.jpg"
+      width="300"
+    />
+  </p>
+  <p
+    className="text"
+  >
+    Otono
+  </p>
+  <p>
+    Front End Engineer
+  </p>
+</div>
+`;

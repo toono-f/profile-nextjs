@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`storyshots components/atoms/Button Default 1`] = `
+<a
+  className="button"
+  href="https://github.com/toono-f"
+  rel="noreferrer"
+  target="_blank"
+>
+  Button
+</a>
+`;
