@@ -1,4 +1,4 @@
-import { ZennIcon } from "@/components/atoms/ZennIcon";
+import { SvgIcon } from "@/components/atoms/SvgIcon";
 import styles from "@/components/organisms/Footer/Footer.module.scss";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -21,7 +21,7 @@ export const Footer = () => {
           </li>
           <li>
             <a href="https://zenn.dev/toono_f" target="_blank" rel="noreferrer">
-              <ZennIcon />
+              <SvgIcon fileName="Zenn" width={34} height={34} fill="#3EA8FF" />
             </a>
           </li>
         </ul>
