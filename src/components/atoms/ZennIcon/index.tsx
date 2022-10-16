@@ -1,1 +1,0 @@
-export { ZennIcon } from "@/components/atoms/ZennIcon/ZennIcon";
