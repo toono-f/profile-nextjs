@@ -8,11 +8,9 @@ export default { component: SvgIcon, args: {} } as ComponentMeta<T>;
 
 export const Default: Story = {
   args: {
-    fileName: "icon",
-    width: 20,
-    height: 20,
-    stroke: "red",
-    strokeWidth: "2.5",
-    fill: "none",
+    fileName: "Zenn",
+    width: 34,
+    height: 34,
+    fill: "#3EA8FF",
   },
 };
