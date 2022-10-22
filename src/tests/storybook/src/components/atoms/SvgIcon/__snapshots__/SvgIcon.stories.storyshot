@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`storyshots components/atoms/SvgIcon Default 1`] = `
+<span
+  className="jsx-d40baeb5bd3d1625 jsx-3942912830 icon"
+/>
+`;

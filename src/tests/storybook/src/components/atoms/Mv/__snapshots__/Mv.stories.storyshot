@@ -11,7 +11,7 @@ exports[`storyshots components/atoms/Mv Default 1`] = `
       alt=""
       decoding="async"
       height="300"
-      src="/images/index/mv.jpg"
+      src="/images/index/mv.png"
       width="300"
     />
   </p>
