@@ -9,7 +9,7 @@ const customJestConfig = {
   moduleNameMapper: {
     // tsconfig.jsonのcompilerOptions>pathsの定義に合わせる
     "^@/(.*)$": "<rootDir>/src/$1",
-    "\\.mdx": "<rootDir>/src/tests/storybook/__mocks__/Mdx.tsx",
+    "\\.mdx": "<rootDir>/src/tests/storybook/__mocks__/MdxMock.tsx",
   },
   testEnvironment: "jest-environment-jsdom",
   setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
