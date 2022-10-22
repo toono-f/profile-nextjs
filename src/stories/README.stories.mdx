@@ -1,0 +1,37 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Docs/README" />
+
+# README
+
+Storybook に関する情報
+
+## テスト
+
+StoryShots（Storybook Addon）を利用したテストを実行できます。
+
+### StoryShot の実行
+
+```
+yarn stortyshots
+```
+
+スナップショットの更新
+
+```
+yarn stortyshots -u
+```
+
+### スクリーンショットを比較する StoryShot の実行
+
+事前に`yarn storybook`を実行して、ローカルサーバを起動し、本画面をブラウザで開いておく必要があります。
+
+```
+yarn storyshots:image
+```
+
+スクリーンショットの更新
+
+```
+yarn storyshots:image -u
+```
