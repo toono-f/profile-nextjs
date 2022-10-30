@@ -48,7 +48,7 @@ export const Top = ({ blogList }: TopProps) => {
         </p>
         <p className="mt-20 leading-lg">
           趣味はプロ野球観戦。好きな球団は
-          <button className="underline" onClick={() => isPlay(true)}>
+          <button className="inline underline" onClick={() => isPlay(true)}>
             北海道日本ハムファイターズ。
           </button>
           <br className="sp:hidden" />
