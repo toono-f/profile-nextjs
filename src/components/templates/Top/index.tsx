@@ -97,10 +97,10 @@ export const Top = ({ blogList, day, day02 }: TopProps) => {
         </section>
 
         <Spacer size="lg" />
-
+        {/* 
         <span>{day}</span>
         <br />
-        <span>{day02}</span>
+        <span>{day02}</span> */}
 
         <MovieModal id="XgDWlvNXtG8" play={play} isPlay={isPlay} />
       </section>
