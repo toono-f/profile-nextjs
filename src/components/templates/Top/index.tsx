@@ -25,7 +25,7 @@ export const Top = ({ blogList, day }: TopProps) => {
   // const { data } = useSWR<UsersType>(`${process.env.NEXT_PUBLIC_API_PATH}/users`, fetcher);
   const [play, isPlay] = useState<boolean>(false);
 
-  console.log(dayjs().tz().format());
+  console.log(dayjs().format());
 
   return (
     <main className="pb-100 pt-120 sp:pb-50 sp:pt-70">

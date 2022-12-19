@@ -22,7 +22,7 @@ type PageProps = {
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const data: PageProps = await client.get({ endpoint: "blogs" });
-  const day = dayjs().tz().format();
+  const day = dayjs().format();
 
   return {
     props: {
