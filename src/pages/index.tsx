@@ -36,7 +36,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
 };
 
 const Page: NextPageWithLayout<PageProps> = ({ contents, day, day02 }) => {
-  return <Top blogList={contents} day={day} day={day02} />;
+  return <Top blogList={contents} day={day} day02={day02} />;
 };
 
 Page.getLayout = BasicLayout;
