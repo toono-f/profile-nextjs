@@ -14,15 +14,18 @@ import HandymanIcon from "@mui/icons-material/Handyman";
 import RssFeedIcon from "@mui/icons-material/RssFeed";
 import { useState } from "react";
 // import useSWR from "swr";
+import dayjs from "@/lib/dayjs";
 
 type TopProps = {
   blogList: BlogListType;
+  day: string;
 };
 
-export const Top = ({ blogList }: TopProps) => {
+export const Top = ({ blogList, day }: TopProps) => {
   // const { data } = useSWR<UsersType>(`${process.env.NEXT_PUBLIC_API_PATH}/users`, fetcher);
-
   const [play, isPlay] = useState<boolean>(false);
+
+  console.log(dayjs().tz().format());
 
   return (
     <main className="pb-100 pt-120 sp:pb-50 sp:pt-70">
@@ -91,6 +94,10 @@ export const Top = ({ blogList }: TopProps) => {
           <p className="leading-lg">仕事の依頼等、何かありましたら気軽にお問い合わせください。</p>
           <Button href="https://docs.google.com/forms/d/18JeZHlJaTIUSL1EAYyj-deiDUZyunvoxNB09m-IPDFw/viewform?edit_requested=true">お問い合わせ</Button>
         </section>
+
+        <Spacer size="lg" />
+
+        <span>{day}</span>
 
         <MovieModal id="XgDWlvNXtG8" play={play} isPlay={isPlay} />
       </section>
