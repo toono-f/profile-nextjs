@@ -19,9 +19,10 @@ import dayjs from "@/lib/dayjs";
 type TopProps = {
   blogList: BlogListType;
   day: string;
+  day02: string;
 };
 
-export const Top = ({ blogList, day }: TopProps) => {
+export const Top = ({ blogList, day, day02 }: TopProps) => {
   // const { data } = useSWR<UsersType>(`${process.env.NEXT_PUBLIC_API_PATH}/users`, fetcher);
   const [play, isPlay] = useState<boolean>(false);
 
@@ -98,6 +99,8 @@ export const Top = ({ blogList, day }: TopProps) => {
         <Spacer size="lg" />
 
         <span>{day}</span>
+        <br />
+        <span>{day02}</span>
 
         <MovieModal id="XgDWlvNXtG8" play={play} isPlay={isPlay} />
       </section>
