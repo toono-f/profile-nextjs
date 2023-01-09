@@ -4,7 +4,7 @@ import { client } from "@/lib/client";
 import { NextPageWithLayout } from "@/lib/next/types";
 import { BlogListType } from "@/types/api";
 import { GetServerSideProps } from "next";
-import dayjs from "@/lib/dayjs";
+// import dayjs from "@/lib/dayjs";
 
 type PageProps = {
   contents: BlogListType;
@@ -23,20 +23,18 @@ type PageProps = {
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const data: PageProps = await client.get({ endpoint: "blogs" });
-  const day = dayjs().format();
-  const day02 = dayjs().tz().format();
+  // const day = dayjs().format();
+  // const day02 = dayjs().tz().format();
 
   return {
     props: {
       contents: data.contents,
-      day: day,
-      day02: day02,
     },
   };
 };
 
-const Page: NextPageWithLayout<PageProps> = ({ contents, day, day02 }) => {
-  return <Top blogList={contents} day={day} day02={day02} />;
+const Page: NextPageWithLayout<PageProps> = ({ contents }) => {
+  return <Top blogList={contents} />;
 };
 
 Page.getLayout = BasicLayout;

@@ -6,27 +6,20 @@ import { Title } from "@/components/atoms/Title";
 import { BlogList } from "@/components/molecules/BlogList";
 import { TagList } from "@/components/molecules/TagList";
 import { Skills } from "@/data/Skills";
-// import { fetcher } from "@/hooks/fecther";
 import { BlogListType } from "@/types/api";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import EmailIcon from "@mui/icons-material/Email";
 import HandymanIcon from "@mui/icons-material/Handyman";
 import RssFeedIcon from "@mui/icons-material/RssFeed";
 import { useState } from "react";
-// import useSWR from "swr";
-import dayjs from "@/lib/dayjs";
 
 type TopProps = {
   blogList: BlogListType;
-  day: string;
-  day02: string;
 };
 
-export const Top = ({ blogList, day, day02 }: TopProps) => {
+export const Top = ({ blogList }: TopProps) => {
   // const { data } = useSWR<UsersType>(`${process.env.NEXT_PUBLIC_API_PATH}/users`, fetcher);
   const [play, isPlay] = useState<boolean>(false);
-
-  console.log(dayjs().format());
 
   return (
     <main className="pb-100 pt-120 sp:pb-50 sp:pt-70">
@@ -37,10 +30,6 @@ export const Top = ({ blogList, day, day02 }: TopProps) => {
           <span>About</span>
         </Title>
 
-        {/* {data?.users.map((item, key) => {
-          return <p key={key}>{item.age}</p>;
-        })} */}
-
         <p className="mt-20 leading-lg">
           1993年生まれ。北海道出身、東京在住のWebエンジニア。
           <br className="sp:hidden" />
@@ -50,6 +39,7 @@ export const Top = ({ blogList, day, day02 }: TopProps) => {
           <br className="sp:hidden" />
           現在は自社開発でフロントエンドエンジニアとして就業中。
         </p>
+
         <p className="mt-20 leading-lg">
           趣味はプロ野球観戦。好きな球団は
           <button className="inline underline" onClick={() => isPlay(true)}>
@@ -97,10 +87,6 @@ export const Top = ({ blogList, day, day02 }: TopProps) => {
         </section>
 
         <Spacer size="lg" />
-        {/* 
-        <span>{day}</span>
-        <br />
-        <span>{day02}</span> */}
 
         <MovieModal id="XgDWlvNXtG8" play={play} isPlay={isPlay} />
       </section>
