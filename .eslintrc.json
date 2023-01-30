@@ -1,9 +1,26 @@
 {
-  "extends": ["next/core-web-vitals", "eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier", "plugin:storybook/recommended"],
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:storybook/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "plugins": [
+    "simple-import-sort", // import文の自動整列を実現
+    "import", // 上記プラグインを拡張（自動整列のルールを追加）
+    "unused-imports" // 未使用のimport文を削除
+  ],
   "ignorePatterns": ["*.config.js", "*.config.*.js", "*.setup.js"],
   "rules": {
     "@next/next/no-img-element": "off", // next/image以外も利用を許可
     "@typescript-eslint/no-empty-interface": "off", // jest関連で利用
-    "@typescript-eslint/no-namespace": "off" // jest関連で利用
+    "@typescript-eslint/no-namespace": "off", // jest関連で利用
+    "simple-import-sort/imports": "error", // importのsortルールを設定
+    "simple-import-sort/exports": "error", // exportのsortルールを設定
+    "import/first": "error", // すべてのimportがファイルの先頭にあることを確認
+    "import/newline-after-import": "error", // import後に改行があることを確認
+    "import/no-duplicates": "error", // 同じファイルのimportをマージ
+    "unused-imports/no-unused-imports": "error" // 未使用のimport文を削除
   }
 }
