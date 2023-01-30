@@ -1,5 +1,6 @@
-import styles from "@/components/atoms/MovieModal/MovieModal.module.scss";
 import { Dispatch, SetStateAction } from "react";
+
+import styles from "@/components/atoms/MovieModal/MovieModal.module.scss";
 
 type MovieModalProps = {
   id: string;
@@ -55,7 +56,11 @@ export const MovieModal = ({
   return play ? (
     <div className={styles.modal} onClick={() => isPlay(false)}>
       <div className={styles.modal_box}>
-        <button title="閉じる" className={styles.modal_close} onClick={() => isPlay(false)}></button>
+        <button
+          title="閉じる"
+          className={styles.modal_close}
+          onClick={() => isPlay(false)}
+        ></button>
         <div className={styles.modal_movie}>
           <iframe
             width="560"

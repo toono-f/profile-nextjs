@@ -1,10 +1,11 @@
+import Head from "next/head";
+import { NextSeo } from "next-seo";
+import { ReactElement } from "react";
+
 import styles from "@/components/layouts/BasicLayout/BasicLayout.module.scss";
 import { Footer } from "@/components/organisms/Footer";
 import { Header } from "@/components/organisms/Header";
 import { Seo } from "@/data/Seo";
-import { NextSeo } from "next-seo";
-import Head from "next/head";
-import { ReactElement } from "react";
 
 export const BasicLayout = (page: ReactElement) => {
   return (

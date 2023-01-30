@@ -1,5 +1,6 @@
-import { SvgIcon } from "@/components/atoms/SvgIcon";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+
+import { SvgIcon } from "@/components/atoms/SvgIcon";
 
 type T = typeof SvgIcon;
 type Story = ComponentStoryObj<T>;

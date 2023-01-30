@@ -1,5 +1,6 @@
-import { Header } from "@/components/organisms/Header";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+
+import { Header } from "@/components/organisms/Header";
 
 type T = typeof Header;
 type Story = ComponentStoryObj<T>;

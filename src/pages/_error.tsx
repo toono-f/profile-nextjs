@@ -1,6 +1,7 @@
+import { NextPageContext } from "next";
+
 import { BasicLayout } from "@/components/layouts/BasicLayout";
 import { NextPageWithLayout } from "@/lib/next/types";
-import { NextPageContext } from "next";
 
 type ErrorProps = {
   statusCode: number;
@@ -9,7 +10,11 @@ type ErrorProps = {
 const Error: NextPageWithLayout<ErrorProps> = ({ statusCode }) => {
   return (
     <main style={{ padding: "100px 20px", textAlign: "center" }}>
-      <p>{statusCode ? `An error ${statusCode} occurred on server` : "An error occurred on client"}</p>
+      <p>
+        {statusCode
+          ? `An error ${statusCode} occurred on server`
+          : "An error occurred on client"}
+      </p>
     </main>
   );
 };

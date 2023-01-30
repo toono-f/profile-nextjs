@@ -1,7 +1,8 @@
+import { NextSeo } from "next-seo";
+
 import { Button } from "@/components/atoms/Button";
 import { Article } from "@/components/organisms/Article";
 import { BlogType } from "@/types/api";
-import { NextSeo } from "next-seo";
 
 const Meta = {
   description: "フロントエンドエンジニアのおとのによるブログ記事です。",

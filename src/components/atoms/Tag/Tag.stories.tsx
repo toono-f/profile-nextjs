@@ -1,5 +1,6 @@
-import { Tag } from "@/components/atoms/Tag";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+
+import { Tag } from "@/components/atoms/Tag";
 
 type T = typeof Tag;
 type Story = ComponentStoryObj<T>;

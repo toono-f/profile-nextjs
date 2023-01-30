@@ -1,6 +1,7 @@
+import Link from "next/link";
+
 import styles from "@/components/molecules/BlogList/BlogList.module.scss";
 import { BlogListType } from "@/types/api";
-import Link from "next/link";
 
 type blogListProps = {
   data: BlogListType;

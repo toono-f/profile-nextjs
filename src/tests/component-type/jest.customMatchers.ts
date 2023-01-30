@@ -15,7 +15,18 @@ declare global {
   }
 }
 
-const groupRoles = ["group", "article", "list", "term", "tablist", "tabpanel", "table", "rowgroup", "row", "combobox"];
+const groupRoles = [
+  "group",
+  "article",
+  "list",
+  "term",
+  "tablist",
+  "tabpanel",
+  "table",
+  "rowgroup",
+  "row",
+  "combobox",
+];
 
 const maybeLandmarkRoles = ["banner", "contentinfo"];
 
@@ -53,7 +64,9 @@ function includeMainRole(keys: string[]) {
 }
 
 function getRoleKeys(container: HTMLElement) {
-  return Object.keys(getRoles(container)).filter((key) => !ignoresRoles.includes(key));
+  return Object.keys(getRoles(container)).filter(
+    (key) => !ignoresRoles.includes(key)
+  );
 }
 
 function fail(message: string) {
@@ -71,7 +84,11 @@ function toBeAtom(container: HTMLElement): jest.CustomMatcherResult {
   if (includeWindowRole(keys)) {
     return fail("Atom should not include window role.");
   }
-  if (includeLandmarkRole(keys) || includeMaybeLandmarkRole(keys) || includeMainRole(keys)) {
+  if (
+    includeLandmarkRole(keys) ||
+    includeMaybeLandmarkRole(keys) ||
+    includeMainRole(keys)
+  ) {
     return fail("Atom should not include landmark role.");
   }
   return { pass: true, message: () => "it Atom" };
@@ -99,7 +116,13 @@ function toBeOrganism(container: HTMLElement): jest.CustomMatcherResult {
   if (!(keys.length >= 2)) {
     return fail("Organism should structed by multiple role.");
   }
-  if (!(includeLandmarkRole(keys) || includeMaybeLandmarkRole(keys) || includeWindowRole(keys))) {
+  if (
+    !(
+      includeLandmarkRole(keys) ||
+      includeMaybeLandmarkRole(keys) ||
+      includeWindowRole(keys)
+    )
+  ) {
     return fail("Organism should structed by landmark or window role.");
   }
   if (includeMainRole(keys)) {

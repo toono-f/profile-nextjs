@@ -1,5 +1,6 @@
-import { Footer } from "@/components/organisms/Footer";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+
+import { Footer } from "@/components/organisms/Footer";
 
 type T = typeof Footer;
 type Story = ComponentStoryObj<T>;

@@ -1,5 +1,6 @@
-import { MovieModal } from "@/components/atoms/MovieModal";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+
+import { MovieModal } from "@/components/atoms/MovieModal";
 
 type T = typeof MovieModal;
 type Story = ComponentStoryObj<T>;

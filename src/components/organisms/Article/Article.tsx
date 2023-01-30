@@ -12,7 +12,10 @@ export const Article = ({ data }: ArticleProps) => {
       <p className={styles.thumbnail}>
         <img src={data.eyecatch.url} alt="" decoding="async" />
       </p>
-      <div className={styles.content} dangerouslySetInnerHTML={{ __html: data.content }}></div>
+      <div
+        className={styles.content}
+        dangerouslySetInnerHTML={{ __html: data.content }}
+      ></div>
     </article>
   );
 };

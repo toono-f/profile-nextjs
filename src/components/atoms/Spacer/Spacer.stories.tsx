@@ -1,5 +1,6 @@
-import { Spacer } from "@/components/atoms/Spacer";
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+
+import { Spacer } from "@/components/atoms/Spacer";
 
 type T = typeof Spacer;
 type Story = ComponentStoryObj<T>;

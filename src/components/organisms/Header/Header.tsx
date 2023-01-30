@@ -1,6 +1,7 @@
-import styles from "@/components/organisms/Header/Header.module.scss";
 import Link from "next/link";
 import { useRouter } from "next/router";
+
+import styles from "@/components/organisms/Header/Header.module.scss";
 // import { useRouter } from "next/router";
 // import { useState } from "react";
 

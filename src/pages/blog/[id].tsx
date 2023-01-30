@@ -1,9 +1,10 @@
+import { GetStaticPaths, GetStaticProps } from "next";
+
 import { BasicLayout } from "@/components/layouts/BasicLayout";
 import { BlogDetail } from "@/components/templates/BlogDetail";
 import { client } from "@/lib/client";
 import { NextPageWithLayout } from "@/lib/next/types";
 import { BlogListType, BlogType } from "@/types/api";
-import { GetStaticPaths, GetStaticProps } from "next";
 
 type dataType = {
   contents: BlogListType;

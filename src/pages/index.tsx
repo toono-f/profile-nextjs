@@ -1,9 +1,10 @@
+import { GetServerSideProps } from "next";
+
 import { BasicLayout } from "@/components/layouts/BasicLayout";
 import { Top } from "@/components/templates/Top";
 import { client } from "@/lib/client";
 import { NextPageWithLayout } from "@/lib/next/types";
 import { BlogListType } from "@/types/api";
-import { GetServerSideProps } from "next";
 // import dayjs from "@/lib/dayjs";
 
 type PageProps = {

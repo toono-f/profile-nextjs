@@ -1,7 +1,9 @@
-import * as stories from "@/components/atoms/Button/Button.stories";
-import { composeStories } from "@storybook/testing-react";
 import "@testing-library/jest-dom";
+
+import { composeStories } from "@storybook/testing-react";
 import { render } from "@testing-library/react";
+
+import * as stories from "@/components/atoms/Button/Button.stories";
 
 const { Default } = composeStories(stories);
 

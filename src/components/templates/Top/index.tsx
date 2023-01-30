@@ -1,3 +1,8 @@
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import EmailIcon from "@mui/icons-material/Email";
+import HandymanIcon from "@mui/icons-material/Handyman";
+import RssFeedIcon from "@mui/icons-material/RssFeed";
+
 import { Button } from "@/components/atoms/Button";
 import { Mv } from "@/components/atoms/Mv";
 import { Spacer } from "@/components/atoms/Spacer";
@@ -6,10 +11,6 @@ import { BlogList } from "@/components/molecules/BlogList";
 import { TagList } from "@/components/molecules/TagList";
 import { Skills } from "@/data/Skills";
 import { BlogListType } from "@/types/api";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import EmailIcon from "@mui/icons-material/Email";
-import HandymanIcon from "@mui/icons-material/Handyman";
-import RssFeedIcon from "@mui/icons-material/RssFeed";
 
 type TopProps = {
   blogList: BlogListType;
@@ -77,8 +78,12 @@ export const Top = ({ blogList }: TopProps) => {
             <EmailIcon sx={{ fontSize: 26 }} />
             <span>Contact</span>
           </Title>
-          <p className="leading-lg">仕事の依頼等、何かありましたら気軽にお問い合わせください。</p>
-          <Button href="https://docs.google.com/forms/d/18JeZHlJaTIUSL1EAYyj-deiDUZyunvoxNB09m-IPDFw/viewform?edit_requested=true">お問い合わせ</Button>
+          <p className="leading-lg">
+            仕事の依頼等、何かありましたら気軽にお問い合わせください。
+          </p>
+          <Button href="https://docs.google.com/forms/d/18JeZHlJaTIUSL1EAYyj-deiDUZyunvoxNB09m-IPDFw/viewform?edit_requested=true">
+            お問い合わせ
+          </Button>
         </section>
 
         <Spacer size="lg" />

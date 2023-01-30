@@ -6,7 +6,13 @@ export const Mv = () => {
       <p className={styles.icon}>
         <picture>
           <source srcSet="/images/index/mv.webp" type="image/webp" />
-          <img src="/images/index/mv.png" alt="" width="300" height="300" decoding="async" />
+          <img
+            src="/images/index/mv.png"
+            alt=""
+            width="300"
+            height="300"
+            decoding="async"
+          />
         </picture>
       </p>
       <p className={styles.text}>Otono</p>

@@ -1,9 +1,21 @@
-import { SvgIconProps } from "@/data/SvgIconList";
 import dynamic, { Loader } from "next/dynamic";
 import { FC, SVGProps } from "react";
 
-export const SvgIcon = ({ fileName, width, height, ...props }: SvgIconProps) => {
-  const Icon = dynamic(() => import("@/data/SvgIconList").then((module) => module[fileName as keyof Loader<SVGProps<SVGElement>>]), { ssr: false }) as FC<SVGProps<SVGElement>>;
+import { SvgIconProps } from "@/data/SvgIconList";
+
+export const SvgIcon = ({
+  fileName,
+  width,
+  height,
+  ...props
+}: SvgIconProps) => {
+  const Icon = dynamic(
+    () =>
+      import("@/data/SvgIconList").then(
+        (module) => module[fileName as keyof Loader<SVGProps<SVGElement>>]
+      ),
+    { ssr: false }
+  ) as FC<SVGProps<SVGElement>>;
 
   return (
     <>
