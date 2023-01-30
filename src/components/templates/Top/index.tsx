@@ -1,5 +1,4 @@
 import { Button } from "@/components/atoms/Button";
-import { MovieModal } from "@/components/atoms/MovieModal";
 import { Mv } from "@/components/atoms/Mv";
 import { Spacer } from "@/components/atoms/Spacer";
 import { Title } from "@/components/atoms/Title";
@@ -11,16 +10,12 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import EmailIcon from "@mui/icons-material/Email";
 import HandymanIcon from "@mui/icons-material/Handyman";
 import RssFeedIcon from "@mui/icons-material/RssFeed";
-import { useState } from "react";
 
 type TopProps = {
   blogList: BlogListType;
 };
 
 export const Top = ({ blogList }: TopProps) => {
-  // const { data } = useSWR<UsersType>(`${process.env.NEXT_PUBLIC_API_PATH}/users`, fetcher);
-  const [play, isPlay] = useState<boolean>(false);
-
   return (
     <main className="pb-100 pt-120 sp:pb-50 sp:pt-70">
       <Mv />
@@ -41,10 +36,10 @@ export const Top = ({ blogList }: TopProps) => {
         </p>
 
         <p className="mt-20 leading-lg">
-          趣味はプロ野球観戦。好きな球団は
-          <button className="inline underline" onClick={() => isPlay(true)}>
+          趣味はプロ野球観戦。好きな球団は北海道日本ハムファイターズ。
+          {/* <button className="inline underline" onClick={() => isPlay(true)}>
             北海道日本ハムファイターズ。
-          </button>
+          </button> */}
           <br className="sp:hidden" />
           休日は友人とチャットを繋げながらもくもく作業したり、
           <br className="sp:hidden" />
@@ -87,8 +82,6 @@ export const Top = ({ blogList }: TopProps) => {
         </section>
 
         <Spacer size="lg" />
-
-        <MovieModal id="XgDWlvNXtG8" play={play} isPlay={isPlay} />
       </section>
     </main>
   );
