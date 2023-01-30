@@ -2,17 +2,18 @@ import { GetServerSideProps } from "next";
 
 import { BasicLayout } from "@/components/layouts/BasicLayout";
 import { Top } from "@/components/templates/Top";
-import { client } from "@/lib/client";
 import { NextPageWithLayout } from "@/lib/next/types";
-import { BlogListType } from "@/types/api";
-// import dayjs from "@/lib/dayjs";
+import { ZennItem } from "@/types/api";
+// import dayjs from "@/lib/dayjs"; // 検証用
 
 type PageProps = {
-  contents: BlogListType;
-  day: string;
-  day02: string;
+  contents: ZennItem[];
+  // 以下検証用
+  // day: string;
+  // day02: string;
 };
 
+// microCMS用
 // export const getStaticProps: GetStaticProps = async () => {
 //   const data: PageProps = await client.get({ endpoint: "blogs" });
 //   return {
@@ -23,13 +24,16 @@ type PageProps = {
 // };
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const data: PageProps = await client.get({ endpoint: "blogs" });
+  // 以下検証用
   // const day = dayjs().format();
   // const day02 = dayjs().tz().format();
 
+  const res = await fetch("https://zenn.dev/api/articles?username=toono_f");
+  const result = await res.json();
+
   return {
     props: {
-      contents: data.contents,
+      contents: result.articles,
     },
   };
 };

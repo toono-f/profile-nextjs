@@ -7,13 +7,12 @@ import { Button } from "@/components/atoms/Button";
 import { Mv } from "@/components/atoms/Mv";
 import { Spacer } from "@/components/atoms/Spacer";
 import { Title } from "@/components/atoms/Title";
-import { BlogList } from "@/components/molecules/BlogList";
 import { TagList } from "@/components/molecules/TagList";
 import { Skills } from "@/data/Skills";
-import { BlogListType } from "@/types/api";
+import { ZennItem } from "@/types/api";
 
 type TopProps = {
-  blogList: BlogListType;
+  blogList: ZennItem[];
 };
 
 export const Top = ({ blogList }: TopProps) => {
@@ -25,7 +24,6 @@ export const Top = ({ blogList }: TopProps) => {
           <AccountCircleIcon sx={{ fontSize: 26 }} />
           <span>About</span>
         </Title>
-
         <p className="mt-20 leading-lg">
           1993年生まれ。北海道出身、東京在住のWebエンジニア。
           <br className="sp:hidden" />
@@ -35,7 +33,6 @@ export const Top = ({ blogList }: TopProps) => {
           <br className="sp:hidden" />
           現在は自社開発でフロントエンドエンジニアとして就業中。
         </p>
-
         <p className="mt-20 leading-lg">
           趣味はプロ野球観戦。好きな球団は北海道日本ハムファイターズ。
           {/* <button className="inline underline" onClick={() => isPlay(true)}>
@@ -46,9 +43,7 @@ export const Top = ({ blogList }: TopProps) => {
           <br className="sp:hidden" />
           美味しいケーキを食べに行くのが好きです。
         </p>
-
         <Spacer size="lg" />
-
         <section className="flex flex-col items-center gap-20">
           <Title>
             <HandymanIcon sx={{ fontSize: 26 }} />
@@ -56,23 +51,7 @@ export const Top = ({ blogList }: TopProps) => {
           </Title>
           <TagList data={Skills} />
         </section>
-
-        {blogList.length > 0 && (
-          <>
-            <Spacer size="lg" />
-
-            <section className="flex flex-col items-center gap-20">
-              <Title>
-                <RssFeedIcon sx={{ fontSize: 26 }} />
-                <span>Blog</span>
-              </Title>
-              <BlogList data={blogList} />
-            </section>
-          </>
-        )}
-
         <Spacer size="lg" />
-
         <section className="flex flex-col items-center gap-20">
           <Title>
             <EmailIcon sx={{ fontSize: 26 }} />
@@ -85,8 +64,33 @@ export const Top = ({ blogList }: TopProps) => {
             お問い合わせ
           </Button>
         </section>
-
-        <Spacer size="lg" />
+        {blogList.length > 0 && (
+          <>
+            <Spacer size="lg" />
+            <section className="flex flex-col items-center gap-20">
+              <Title>
+                <RssFeedIcon sx={{ fontSize: 26 }} />
+                <span>Blog</span>
+              </Title>
+              <ul className="grid gap-14 text-[#0f83fd]">
+                {blogList
+                  .filter((item) => item.liked_count > 80)
+                  .map((item, index) => (
+                    <li key={index}>
+                      <a
+                        href={`https://zenn.dev/${item.path}`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="hover:underline"
+                      >
+                        {item.title}
+                      </a>
+                    </li>
+                  ))}
+              </ul>
+            </section>
+          </>
+        )}
       </section>
     </main>
   );
