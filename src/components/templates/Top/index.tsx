@@ -38,7 +38,16 @@ export const Top = ({ blogList }: TopProps) => {
           <br className="sp:hidden" />
           休日は友人とチャットを繋げながらもくもく作業したり、
           <br className="sp:hidden" />
-          美味しいケーキを食べに行くのが好きです。
+          美味しいごはんを食べに行くのが好きです。
+          <br />
+          <a
+            className="text-[#0f83fd] hover:underline"
+            href="https://note.com/otonofrontend/n/n95f34ca56193"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            愛用品リストはこちら
+          </a>
         </p>
         <Spacer size="lg" />
         <section className="flex flex-col items-center gap-20">
